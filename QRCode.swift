@@ -56,8 +56,8 @@ struct QrCode {
             height = qrCode.bounds.height
             width = qrCode.bounds.width
             corners = qrCodeCorners
-            
         }
+        
         self.width = width
         self.height = height
         self.corners = corners
@@ -80,7 +80,5 @@ struct QrCode {
         guard let pixelBuffer: CVImageBuffer = CMSampleBufferGetImageBuffer(imageSampleBuffer) else { return nil }
         let ciImageFormPixelBuffer = CIImage(cvImageBuffer: pixelBuffer)
         self.init(ciImageFormPixelBuffer)
-
     }
-
 }
